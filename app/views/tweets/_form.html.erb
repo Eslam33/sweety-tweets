@@ -1,8 +1,10 @@
 <%= simple_form_for(@tweet) do |f| %>
-<%= f.error_notification %>
+<%= f.error_notification class: 'form_error'%>
 <div class="field">
   <div class="control">
-    <%= f.input :tweet, label: "Tweeet about it", input_html: { class: "textarea "}, wrapper: false, label_html: {class: "label"}, placeholder: "Compose a new tweeet...", autofocus: true %>
+    <%= f.input :tweet, label: "Tweeet about it", input_html: { class: "textarea " , :cols => 6, :rows => 6 }, wrapper: false, label_html: {class: "label"}, placeholder: "Compose a new tweeet...", autofocus: true ,
+
+    maxlength: 255, size: 30%>
   </div>
 </div>
 <%= f.button :submit, class: "button is-info" %>

@@ -26,8 +26,15 @@
   		<div class="media-content">
   			<div class="content">
   				<strong><%= tweeet.user.name%></strong><br />
-  				<small>@<%= tweeet.user.username %></small><br/>
-  				<p><%= tweeet.tweet %></p>
+  				<small>@<%= tweeet.user.username %></small>
+          <p> <%= time_ago_in_words(tweeet.created_at) %> ago</p>
+
+          
+         <span class="tweeta">
+          <p><%= word_wrap(tweeet.tweet.to_s, :line_width => 25).gsub("\n", "\n    ") %>
+          </p>
+         </span>
+
   			</div>
         <% if user_signed_in? && current_user.id == tweeet.user_id %>
   			<nav class="level">

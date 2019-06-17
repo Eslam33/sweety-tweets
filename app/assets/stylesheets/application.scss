@@ -19,6 +19,7 @@ $family-primary:'Ubuntu', sans-serif;
 @import "bulma";
 
 
+
 .navbar-brand .title {
 	color: white;
 }
@@ -32,4 +33,17 @@ $family-primary:'Ubuntu', sans-serif;
 }
 .notification:not(:last-child) {
 	margin-bottom: 0;
+}
+
+.form_error , .error {
+	color: red;
+	margin: 10px;
+}
+
+.tweeta{
+	width: 350px;
+	padding: 5px;
+	margin: 5px;
+	word-break: break-all;
+
 }
